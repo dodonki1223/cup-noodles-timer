@@ -1,13 +1,11 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import AppBar from '../components/AppBar';
 import Button from '../components/Button';
 
 export default function TimerSelectScreen() {
   return (
     <View style={styles.container}>
-      <AppBar />
       <View style={styles.timers}>
         <View style={styles.timersInner}>
           <Button style={styles.timersButton} label="3分" />

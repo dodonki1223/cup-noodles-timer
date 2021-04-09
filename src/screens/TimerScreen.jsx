@@ -1,12 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-import AppBar from '../components/AppBar';
-
 export default function TimerScreen() {
   return (
     <View style={styles.container}>
-      <AppBar />
       <View style={styles.timer}>
         <Text style={styles.timerText}>5:00:00</Text>
       </View>

@@ -1,11 +1,31 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-// import TimerSelectScreen from './src/screens/TimerSelectScreen';
+import TimerSelectScreen from './src/screens/TimerSelectScreen';
 import TimerScreen from './src/screens/TimerScreen';
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <TimerScreen />
-    // <TimerSelectScreen />
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="TimerSelect"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#467FD3' },
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 22,
+            color: '#fff',
+            alignSelf: 'center',
+          },
+          headerTitle: 'カップラーメンタイマー',
+        }}
+      >
+        <Stack.Screen name="TimerSelect" component={TimerSelectScreen} />
+        <Stack.Screen name="Timer" component={TimerScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
