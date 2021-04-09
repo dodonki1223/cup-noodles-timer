@@ -3,14 +3,26 @@ import { View, StyleSheet } from 'react-native';
 
 import Button from '../components/Button';
 
-export default function TimerSelectScreen() {
+export default function TimerSelectScreen(props) {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
       <View style={styles.timers}>
         <View style={styles.timersInner}>
-          <Button style={styles.timersButton} label="3分" />
-          <Button style={styles.timersButton} label="4分" />
-          <Button label="5分" />
+          <Button
+            style={styles.timersButton}
+            label="3分"
+            onPress={() => { navigation.navigate('Timer'); }}
+          />
+          <Button
+            style={styles.timersButton}
+            label="4分"
+            onPress={() => { navigation.navigate('Timer'); }}
+          />
+          <Button
+            label="5分"
+            onPress={() => { navigation.navigate('Timer'); }}
+          />
         </View>
       </View>
     </View>
