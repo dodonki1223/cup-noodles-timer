@@ -20,6 +20,7 @@ export default function App() {
             color: '#fff',
             alignSelf: 'center',
           },
+          headerTitleAlign: 'center',
           headerTitle: 'カップラーメンタイマー',
           headerTintColor: '#fff',
           headerBackTitle: 'Back',
