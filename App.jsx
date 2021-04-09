@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 
 import TimerSelectScreen from './src/screens/TimerSelectScreen';
 import TimerScreen from './src/screens/TimerScreen';
@@ -21,6 +21,11 @@ export default function App() {
             alignSelf: 'center',
           },
           headerTitle: 'カップラーメンタイマー',
+          headerTintColor: '#fff',
+          headerBackTitle: 'Back',
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          gestureEnabled: true,
+          gestureDirection: 'horizontal',
         }}
       >
         <Stack.Screen name="TimerSelect" component={TimerSelectScreen} />
