@@ -12,16 +12,16 @@ export default function TimerSelectScreen(props) {
           <Button
             style={styles.timersButton}
             label="3分"
-            onPress={() => { navigation.navigate('Timer'); }}
+            onPress={() => { navigation.navigate('Timer', { minutes: 60 }); }}
           />
           <Button
             style={styles.timersButton}
             label="4分"
-            onPress={() => { navigation.navigate('Timer'); }}
+            onPress={() => { navigation.navigate('Timer', { minutes: 240 }); }}
           />
           <Button
             label="5分"
-            onPress={() => { navigation.navigate('Timer'); }}
+            onPress={() => { navigation.navigate('Timer', { minutes: 300 }); }}
           />
         </View>
       </View>
